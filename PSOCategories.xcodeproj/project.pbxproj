@@ -16,6 +16,7 @@
 		D4585914171F93950000FB22 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D4585913171F93950000FB22 /* Default.png */; };
 		D4585916171F93950000FB22 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4585915171F93950000FB22 /* Default@2x.png */; };
 		D4585918171F93950000FB22 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4585917171F93950000FB22 /* Default-568h@2x.png */; };
+		D4585921171F947B0000FB22 /* NSDate+PSOWorkweek.m in Sources */ = {isa = PBXBuildFile; fileRef = D4585920171F947B0000FB22 /* NSDate+PSOWorkweek.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		D4585913171F93950000FB22 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D4585915171F93950000FB22 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D4585917171F93950000FB22 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D458591F171F947B0000FB22 /* NSDate+PSOWorkweek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+PSOWorkweek.h"; path = "Categories/NSDate+PSOWorkweek.h"; sourceTree = "<group>"; };
+		D4585920171F947B0000FB22 /* NSDate+PSOWorkweek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+PSOWorkweek.m"; path = "Categories/NSDate+PSOWorkweek.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		D4585907171F93950000FB22 /* PSOCategories */ = {
 			isa = PBXGroup;
 			children = (
+				D458591E171F94430000FB22 /* Categories */,
 				D4585910171F93950000FB22 /* PSOAppDelegate.h */,
 				D4585911171F93950000FB22 /* PSOAppDelegate.m */,
 				D4585908171F93950000FB22 /* Supporting Files */,
@@ -97,6 +101,15 @@
 				D4585917171F93950000FB22 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D458591E171F94430000FB22 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D458591F171F947B0000FB22 /* NSDate+PSOWorkweek.h */,
+				D4585920171F947B0000FB22 /* NSDate+PSOWorkweek.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +180,7 @@
 			files = (
 				D458590E171F93950000FB22 /* main.m in Sources */,
 				D4585912171F93950000FB22 /* PSOAppDelegate.m in Sources */,
+				D4585921171F947B0000FB22 /* NSDate+PSOWorkweek.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +295,7 @@
 				D458591D171F93950000FB22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
