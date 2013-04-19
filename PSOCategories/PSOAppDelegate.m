@@ -7,6 +7,7 @@
 //
 
 #import "PSOAppDelegate.h"
+#import "NSDate+PSOWorkweek.h"
 
 @implementation PSOAppDelegate
 
@@ -16,6 +17,30 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    NSDateFormatter *centralTimeFormatter = [NSDateFormatter new];
+    [centralTimeFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"CST"]];
+    [centralTimeFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDate *today = [NSDate date];
+    NSLog(@"today: %@", [centralTimeFormatter stringFromDate:today]);
+    NSLog(@"today.isWeekday: %d", today.isWeekday);
+    NSDate *nextWeekday = [today nextWeekday];
+    NSLog(@"nextWeekday: %@", [centralTimeFormatter stringFromDate:nextWeekday]);
+    
+    for (int i=0;i<5;i++) {
+        nextWeekday = [nextWeekday nextWeekday];
+        NSLog(@"nextWeekday: %@", [centralTimeFormatter stringFromDate:nextWeekday]);
+    }
+    
+    NSDate *previousWeekday = [today previousWeekday];
+    NSLog(@"previousWeekday: %@", [centralTimeFormatter stringFromDate:previousWeekday]);
+    
+    for (int i=0;i<5;i++) {
+        previousWeekday = [previousWeekday previousWeekday];
+        NSLog(@"previousWeekday: %@", [centralTimeFormatter stringFromDate:previousWeekday]);
+    }
+    
     return YES;
 }
 

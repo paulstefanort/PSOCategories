@@ -10,4 +10,8 @@
 
 @interface NSDate (PSOWorkweek)
 
+- (BOOL)isWeekday;
+- (NSDate *)nextWeekday;
+- (NSDate *)previousWeekday;
+
 @end
